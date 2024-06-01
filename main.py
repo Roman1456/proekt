@@ -1,11 +1,67 @@
+import json
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
 
 app = QApplication([])
 
+app.setStyleSheet("""
+    QWidget
+    {
+    background-color: #0000ff;
+    }
+
+
+    QLabel
+    {
+        background-color: #e0f542;
+        font-size: 18px;
+        color: blue;
+        border-style: double;
+        border-width: 5px;
+        border-color: orange;
+        border-radius: 12px;
+    }
+
+
+    QPushButton 
+    {  
+        background-color: #e0f542;
+        font-size: 18px;
+        color: blue;
+        border-style: double;
+        border-width: 5px;
+        border-color: orange;
+        border-radius: 12px;
+        min-height: 20px;
+        min-width: 100;
+        margin: 5px;
+    }
+
+
+""")
+
+
 window = QWidget()
 window.resize(500,600)
 
-img_lbl1 = QLabel("katinka")
+pixmax1 = QPixmap("kartunka/photo_1_m.jpg")
+pixmax2 = QPixmap("kartunka/photo_2_m.jpg")
+pixmax3 = QPixmap("kartunka/photo_3_m.jpg")
+pixmax4 = QPixmap("kartunka/photo_4_m.jpg")
+pixmax5 = QPixmap("kartunka/photo_5_m.jpg")
+pixmax6 = QPixmap("kartunka/photo_6_m.jpg")
+pixmax7 = QPixmap("kartunka/photo_7_m.jpg")
+pixmax8 = QPixmap("kartunka/photo_8_m.jpg")
+pixmax9 = QPixmap("kartunka/photo_9_m.jpg")
+pixmax10 = QPixmap("kartunka/photo_10_m.jpg")
+pixmax11 = QPixmap("kartunka/photo_11_m.jpg")
+pixmax12 = QPixmap("kartunka/photo_12_m.jpg")
+pixmax13 = QPixmap("kartunka/photo_13_m.jpg")
+
+
+
+
+img_lbl1 = QLabel("kartunka/photo_1_m.jpg")
 img_lbl2 = QLabel("katinka")
 img_lbl3 = QLabel("katinka")
 img_lbl4 = QLabel("katinka")
@@ -32,6 +88,10 @@ answer_lbl_10 = QLabel("250 L")
 answer_lbl_11 = QLabel("250 L")
 answer_lbl_12 = QLabel("300 L")
 answer_lbl_13 = QLabel("1L = 1,5 грн.")
+answer_lbl_14 = QLabel("Logika 300 Логіків")
+answer_lbl_15 = QLabel("")
+answer_lbl_16 = QLabel("")
+
 
 qest_btn1 = QPushButton("Купити")
 qest_btn2 = QPushButton("Купити")
@@ -54,28 +114,27 @@ mine_line = QVBoxLayout()
 h1 = QHBoxLayout()
 
 v1 = QVBoxLayout()
+v1.addWidget(answer_lbl_14)
 v1.addWidget(img_lbl1)
 v1.addWidget(answer_lbl_1)
 v1.addWidget(qest_btn1)
 h1.addLayout(v1)
 
 v2 = QVBoxLayout()
+v2.addWidget(answer_lbl_15)
 v2.addWidget(img_lbl2)
 v2.addWidget(answer_lbl_2)
 v2.addWidget(qest_btn2)
 h1.addLayout(v2)
 
 v3 = QVBoxLayout()
+v3.addWidget(answer_lbl_16)
 v3.addWidget(img_lbl3)
 v3.addWidget(answer_lbl_3)
 v3.addWidget(qest_btn3)
 h1.addLayout(v3)
 
 mine_line.addLayout(h1)
-
-
-
-
 
 
 h2 = QHBoxLayout()
@@ -101,9 +160,6 @@ h2.addLayout(v3)
 mine_line.addLayout(h2)
 
 
-
-
-
 h3 = QHBoxLayout()
 v1 = QVBoxLayout()
 v1.addWidget(img_lbl7)
@@ -125,7 +181,6 @@ v3.addWidget(qest_btn9)
 h3.addLayout(v3)
 
 mine_line.addLayout(h3)
-
 
 
 h4 = QHBoxLayout()
@@ -160,6 +215,19 @@ h5.addLayout(v1)
 mine_line.addLayout(h5)
 
 
+img_lbl1.setPixmap(pixmax1)
+img_lbl2.setPixmap(pixmax2)
+img_lbl3.setPixmap(pixmax3)
+img_lbl4.setPixmap(pixmax4)
+img_lbl5.setPixmap(pixmax5)
+img_lbl6.setPixmap(pixmax6)
+img_lbl7.setPixmap(pixmax7)
+img_lbl8.setPixmap(pixmax8)
+img_lbl9.setPixmap(pixmax9)
+img_lbl10.setPixmap(pixmax10)
+img_lbl11.setPixmap(pixmax11)
+img_lbl12.setPixmap(pixmax12)
+img_lbl13.setPixmap(pixmax13)
 
 
 
