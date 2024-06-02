@@ -2,6 +2,8 @@ import json
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
 
+import qest_window
+
 app = QApplication([])
 
 app.setStyleSheet("""
@@ -59,21 +61,19 @@ pixmax12 = QPixmap("kartunka/photo_12_m.jpg")
 pixmax13 = QPixmap("kartunka/photo_13_m.jpg")
 
 
-
-
-img_lbl1 = QLabel("kartunka/photo_1_m.jpg")
-img_lbl2 = QLabel("katinka")
-img_lbl3 = QLabel("katinka")
-img_lbl4 = QLabel("katinka")
-img_lbl5 = QLabel("katinka")
-img_lbl6 = QLabel("katinka")
-img_lbl7 = QLabel("katinka")
-img_lbl8 = QLabel("katinka")
-img_lbl9 = QLabel("katinka")
-img_lbl10 = QLabel("katinka")
-img_lbl11 = QLabel("katinka")
-img_lbl12 = QLabel("katinka")
-img_lbl13 = QLabel("katinka")
+img_lbl1 = QLabel()
+img_lbl2 = QLabel()
+img_lbl3 = QLabel()
+img_lbl4 = QLabel()
+img_lbl5 = QLabel()
+img_lbl6 = QLabel()
+img_lbl7 = QLabel()
+img_lbl8 = QLabel()
+img_lbl9 = QLabel()
+img_lbl10 = QLabel()
+img_lbl11 = QLabel()
+img_lbl12 = QLabel()
+img_lbl13 = QLabel()
 
 answer_lbl_1 = QLabel("15 L")
 answer_lbl_2 = QLabel("25 L")
@@ -229,10 +229,27 @@ img_lbl11.setPixmap(pixmax11)
 img_lbl12.setPixmap(pixmax12)
 img_lbl13.setPixmap(pixmax13)
 
+def menu_show():
+    window.hide()
+    qest_window.menu_window()
+    window.show()
 
 
 
 
+qest_btn1.clicked.connect(menu_show)
+qest_btn2.clicked.connect(menu_show)
+qest_btn3.clicked.connect(menu_show)
+qest_btn4.clicked.connect(menu_show)
+qest_btn5.clicked.connect(menu_show)
+qest_btn6.clicked.connect(menu_show)
+qest_btn7.clicked.connect(menu_show)
+qest_btn8.clicked.connect(menu_show)
+qest_btn9.clicked.connect(menu_show)
+qest_btn10.clicked.connect(menu_show)
+qest_btn11.clicked.connect(menu_show)
+qest_btn12.clicked.connect(menu_show)
+qest_btn13.clicked.connect(menu_show)
 window.setLayout(mine_line)
 window.show()
 app.exec()
