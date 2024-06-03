@@ -88,9 +88,9 @@ answer_lbl_10 = QLabel("250 L")
 answer_lbl_11 = QLabel("250 L")
 answer_lbl_12 = QLabel("300 L")
 answer_lbl_13 = QLabel("1L = 1,5 грн.")
-answer_lbl_14 = QLabel("Logika 300 Логіків")
-answer_lbl_15 = QLabel("")
-answer_lbl_16 = QLabel("")
+answer_lbl_14 = QLabel("Logika ")
+answer_lbl_15 = QLabel("300")
+answer_lbl_16 = QLabel("Логіків")
 
 
 qest_btn1 = QPushButton("Купити")
