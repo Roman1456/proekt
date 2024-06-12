@@ -17,6 +17,6 @@ class Сandies:
 
     def move(self):
         self.hitbox.y += self.speed
-        if self.hitbox.y > 500:
+        if self.hitbox.y > 450:
             self.hitbox.y = 0
             self.hitbox.x = random.randint(0, 680)

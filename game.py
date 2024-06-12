@@ -10,11 +10,13 @@ backround = pygame.transform.scale(
     pygame.image.load("kartunka/fon.jpg"),(700,500)
 )
 
-um_yum = Um_yum(280,360,100,100, "kartunka/player.png",10)
+um_yum = Um_yum(280,360,100,100, "kartunka/player.png",5)
 
 candies1 = []
 candies1.append(Сandies(50,50,100,50,"kartunka/candies.png",5))
-
+candies1.append(Сandies(50,50,100,50,"kartunka/candies.png",5))
+candies1.append(Сandies(50,50,100,50,"kartunka/candies.png",5))
+candies1.append(Сandies(50,50,100,50,"kartunka/candies.png",5))
 
 game = True
 while game:
@@ -35,6 +37,7 @@ while game:
         um_yum.draw(window)
 
     if um_yum.hitbox.colliderect(candies.hitbox):
+        candies.move()
         pygame.display.flip()
 
 
