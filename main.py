@@ -1,7 +1,7 @@
 import json
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
-
+import game
 import qest_window
 def shop():
 
