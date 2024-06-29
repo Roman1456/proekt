@@ -16,8 +16,8 @@ def game():
     backround = pygame.transform.scale(
         pygame.image.load("kartunka/fon.jpg"),(700,500)
     )
-
-    points = 0
+    settings=read_data()
+    points = settings["money"]
 
     um_yum = Um_yum(280,360,100,100, "kartunka/player.png",10)
 

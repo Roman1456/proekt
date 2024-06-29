@@ -3,6 +3,9 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
 import game
 import qest_window
+from file1 import read_data
+
+
 def shop():
 
 
@@ -90,7 +93,8 @@ def shop():
     answer_lbl_12 = QLabel("300 L")
     answer_lbl_13 = QLabel("1L = 1,5 грн.")
     answer_lbl_14 = QLabel("Logika ")
-    answer_lbl_15 = QLabel()
+    settings = read_data()
+    answer_lbl_15 = QLabel(str(settings["money"]))
     answer_lbl_16 = QLabel("Логіків")
 
 
