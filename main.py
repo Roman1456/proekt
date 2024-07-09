@@ -234,27 +234,31 @@ def shop():
     img_lbl12.setPixmap(pixmax12)
     img_lbl13.setPixmap(pixmax13)
 
-    def menu_show():
+    def menu_show(price):
         window.hide()
-        qest_window.menu_window()
+        qest_window.menu_window(price)
         window.show()
+        settings = read_data()
+        answer_lbl_15.setText(str(settings["money"]))
 
 
 
 
-    qest_btn1.clicked.connect(menu_show)
-    qest_btn2.clicked.connect(menu_show)
-    qest_btn3.clicked.connect(menu_show)
-    qest_btn4.clicked.connect(menu_show)
-    qest_btn5.clicked.connect(menu_show)
-    qest_btn6.clicked.connect(menu_show)
-    qest_btn7.clicked.connect(menu_show)
-    qest_btn8.clicked.connect(menu_show)
-    qest_btn9.clicked.connect(menu_show)
-    qest_btn10.clicked.connect(menu_show)
-    qest_btn11.clicked.connect(menu_show)
-    qest_btn12.clicked.connect(menu_show)
-    qest_btn13.clicked.connect(menu_show)
+
+    qest_btn1.clicked.connect(lambda price: menu_show(15))
+    qest_btn2.clicked.connect(lambda price: menu_show(25))
+    qest_btn3.clicked.connect(lambda price: menu_show(25))
+    qest_btn4.clicked.connect(lambda price: menu_show(30))
+    qest_btn5.clicked.connect(lambda price: menu_show(50))
+    qest_btn6.clicked.connect(lambda price: menu_show(100))
+    qest_btn7.clicked.connect(lambda price: menu_show(150))
+    qest_btn8.clicked.connect(lambda price: menu_show(180))
+    qest_btn9.clicked.connect(lambda price: menu_show(220))
+    qest_btn10.clicked.connect(lambda price: menu_show(250))
+    qest_btn11.clicked.connect(lambda price: menu_show(250))
+    qest_btn12.clicked.connect(lambda price: menu_show(300))
+    qest_btn13.clicked.connect(lambda price: menu_show(1))
+
     window.setLayout(mine_line)
     window.show()
     window.exec()

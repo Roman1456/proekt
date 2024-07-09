@@ -1,7 +1,9 @@
 from PyQt5.QtWidgets import *
 
+from file1 import read_data, write_data
 
-def menu_window():
+
+def menu_window(price):
     window = QDialog()
     qest_lbl = QLabel("Підтрвердіть свій вибір.")
     add_quest_btn = QPushButton("Підтвердити покупку")
@@ -16,6 +18,15 @@ def menu_window():
     h2.addWidget(add_quest_btn)
     main_line.addLayout(h2)
 
-    window.setLayout(main_line)
 
+    def buy():
+        set = read_data()
+
+        set["money"] -= price
+        write_data(set)
+
+
+
+    add_quest_btn.clicked.connect(buy)
+    window.setLayout(main_line)
     window.exec()
