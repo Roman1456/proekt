@@ -234,9 +234,9 @@ def shop():
     img_lbl12.setPixmap(pixmax12)
     img_lbl13.setPixmap(pixmax13)
 
-    def menu_show(price):
+    def menu_show(price, element):
         window.hide()
-        qest_window.menu_window(price)
+        qest_window.menu_window(price, element)
         window.show()
         settings = read_data()
         answer_lbl_15.setText(str(settings["money"]))
@@ -245,19 +245,19 @@ def shop():
 
 
 
-    qest_btn1.clicked.connect(lambda price: menu_show(15))
-    qest_btn2.clicked.connect(lambda price: menu_show(25))
-    qest_btn3.clicked.connect(lambda price: menu_show(25))
-    qest_btn4.clicked.connect(lambda price: menu_show(30))
-    qest_btn5.clicked.connect(lambda price: menu_show(50))
-    qest_btn6.clicked.connect(lambda price: menu_show(100))
-    qest_btn7.clicked.connect(lambda price: menu_show(150))
-    qest_btn8.clicked.connect(lambda price: menu_show(180))
-    qest_btn9.clicked.connect(lambda price: menu_show(220))
-    qest_btn10.clicked.connect(lambda price: menu_show(250))
-    qest_btn11.clicked.connect(lambda price: menu_show(250))
-    qest_btn12.clicked.connect(lambda price: menu_show(300))
-    qest_btn13.clicked.connect(lambda price: menu_show(1))
+    qest_btn1.clicked.connect(lambda price: menu_show(15, "браслет"))
+    qest_btn2.clicked.connect(lambda price: menu_show(25, "наліпки"))
+    qest_btn3.clicked.connect(lambda price: menu_show(25, "ручки,олівці"))
+    qest_btn4.clicked.connect(lambda price: menu_show(30, "значки"))
+    qest_btn5.clicked.connect(lambda price: menu_show(50, "попсокет"))
+    qest_btn6.clicked.connect(lambda price: menu_show(100, "шкарпертки"))
+    qest_btn7.clicked.connect(lambda price: menu_show(150, "пляшка"))
+    qest_btn8.clicked.connect(lambda price: menu_show(180, "килимок"))
+    qest_btn9.clicked.connect(lambda price: menu_show(220, "бананка"))
+    qest_btn10.clicked.connect(lambda price: menu_show(250, "футболка"))
+    qest_btn11.clicked.connect(lambda price: menu_show(250, "парасолька"))
+    qest_btn12.clicked.connect(lambda price: menu_show(300, "Навушники"))
+    qest_btn13.clicked.connect(lambda price: menu_show(1, "Донат на ЗСУ 1L = 1,5 грн."))
 
     window.setLayout(mine_line)
     window.show()

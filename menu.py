@@ -47,7 +47,7 @@ def menu_show1():
 
 def menu_show2():
     window.hide()
-    main.iventori()
+    inventori.window()
     window.show()
 
 menu_qest_btn3.clicked.connect(menu_show2)

@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 from file1 import read_data, write_data
 
 
-def menu_window(price):
+def menu_window(price, element):
     window = QDialog()
     qest_lbl = QLabel("Підтрвердіть свій вибір.")
     add_quest_btn = QPushButton("Підтвердити покупку")
@@ -23,6 +23,7 @@ def menu_window(price):
         set = read_data()
         if set["money"] >= price:
             set["money"] -= price
+            set["inventori"].append(element)
         write_data(set)
         window.close()
 
