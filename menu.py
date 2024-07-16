@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import main
 import game
+import inventori
 import qest_window
 
 app = QApplication([])
@@ -44,8 +45,12 @@ def menu_show1():
     main.shop()
     window.show()
 
+def menu_show2():
+    window.hide()
+    main.iventori()
+    window.show()
 
-
+menu_qest_btn3.clicked.connect(menu_show2)
 menu_qest_btn2.clicked.connect(menu_show1)
 menu_qest_btn1.clicked.connect(menu_show)
 window.setLayout(mine_line)

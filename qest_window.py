@@ -21,12 +21,15 @@ def menu_window(price):
 
     def buy():
         set = read_data()
-
-        set["money"] -= price
+        if set["money"] >= price:
+            set["money"] -= price
         write_data(set)
+        window.close()
 
+    def close():
+        window.close()
 
-
+    canel_quest_btn.clicked.connect(close)
     add_quest_btn.clicked.connect(buy)
     window.setLayout(main_line)
     window.exec()
