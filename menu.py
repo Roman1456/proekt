@@ -45,7 +45,7 @@ app.setStyleSheet("""
 window = QWidget()
 window.resize(500,600)
 
-
+menu_qest_btn4 = QLabel("Магазин")
 menu_qest_btn1 = QPushButton("Грати")
 menu_qest_btn2 = QPushButton("Магазин")
 menu_qest_btn3 = QPushButton("Інветрарь")
@@ -53,6 +53,9 @@ menu_qest_btn3 = QPushButton("Інветрарь")
 
 mine_line = QVBoxLayout()
 
+h4 = QHBoxLayout()
+h4.addWidget(menu_qest_btn4)
+mine_line.addLayout(h4)
 
 h1 = QHBoxLayout()
 h1.addWidget(menu_qest_btn1)
@@ -83,6 +86,7 @@ def menu_show2():
     window.hide()
     inventori.window()
     window.show()
+
 
 menu_qest_btn3.clicked.connect(menu_show2)
 menu_qest_btn2.clicked.connect(menu_show1)
