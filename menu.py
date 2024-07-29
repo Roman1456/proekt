@@ -6,7 +6,41 @@ import qest_window
 
 app = QApplication([])
 
+app.setStyleSheet("""
+          QWidget
+          {
+          background-color: #0000ff;
+          }
 
+
+          QLabel
+          {
+              background-color: #e0f542;
+              font-size: 18px;
+              color: blue;
+              border-style: double;
+              border-width: 5px;
+              border-color: orange;
+              border-radius: 12px;
+          }
+
+
+          QPushButton 
+          {  
+              background-color: #e0f542;
+              font-size: 18px;
+              color: blue;
+              border-style: double;
+              border-width: 5px;
+              border-color: orange;
+              border-radius: 12px;
+              min-height: 20px;
+              min-width: 100;
+              margin: 5px;
+          }
+
+
+      """)
 
 window = QWidget()
 window.resize(500,600)
