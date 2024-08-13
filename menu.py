@@ -39,7 +39,14 @@ app.setStyleSheet("""
               margin: 5px;
           }
 
-
+        QListWidget
+        {     background-color: #e0f542;
+              font-size: 18px;
+              color: blue;
+              border-style: double;
+              border-width: 5px;
+              border-color: orange;
+              border-radius: 12px;} 
       """)
 
 window = QWidget()

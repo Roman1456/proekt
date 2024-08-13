@@ -6,7 +6,7 @@ from file1 import read_data
 def window():
 
     window = QDialog()
-    window.resize(800, 800)
+    window.resize(200, 200)
 
     img_lbl1 = QListWidget()
 
